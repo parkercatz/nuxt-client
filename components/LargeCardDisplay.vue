@@ -9,7 +9,7 @@
     <div class="cards-container">
       <LargeCard
         v-for="card in cardsSection.cards"
-        :key="card.image"
+        :key="card.id"
         :card="card"
       />
     </div>
