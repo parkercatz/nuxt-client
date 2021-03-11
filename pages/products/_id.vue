@@ -47,7 +47,9 @@
       </p>
     </div>
   </div>
-  <div v-else class="container padding">Page Not Found</div>
+  <div v-else class="container padding">
+    <PageNotFound />
+  </div>
 </template>
 
 <script>
