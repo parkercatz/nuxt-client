@@ -6,15 +6,16 @@
       <div class="calendar-container">
         <div class="text-container">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda,
-            explicabo, ab nisi rem tenetur soluta cum quo hic, ea quam iure
-            aperiam similique eos temporibus eveniet id praesentium quos beatae.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+            quis soluta quia neque! Ea modi, a omnis eligendi enim ducimus
+            asperiores.
           </p>
+          <vc-date-picker :value="null" color="indigo" is-dark is-range />
         </div>
-        <b-button id="show-btn" variant="outline-danger" @click="showModal"
-          >Order</b-button
-        >
       </div>
+      <b-button id="show-btn" variant="outline-danger" @click="showModal"
+        >Order</b-button
+      >
     </b-modal>
   </div>
 </template>
