@@ -10,10 +10,18 @@
             quis soluta quia neque! Ea modi, a omnis eligendi enim ducimus
             asperiores.
           </p>
-          <vc-date-picker :value="null" color="indigo" is-dark is-range />
         </div>
+        <vc-date-picker :value="null" color="indigo" is-dark is-range />
       </div>
-      <b-button id="show-btn" variant="outline-danger" @click="showModal"
+      <b-button
+        id="show-btn"
+        variant="outline-danger"
+        @click="
+          () => {
+            addItem(product.id)
+            hideModal()
+          }
+        "
         >Order</b-button
       >
     </b-modal>
@@ -21,7 +29,9 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
+  props: ['product'],
   methods: {
     showModal() {
       this.$refs['my-modal'].show()
@@ -34,6 +44,7 @@ export default {
       // when the modal has hidden
       this.$refs['my-modal'].toggle('#toggle-btn')
     },
+    ...mapMutations(['addItem']),
   },
 }
 </script>
